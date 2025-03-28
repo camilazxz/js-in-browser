@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header> 
+        <div class="remont">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</div>
+    </header>
+    <div class="brands">
+        <img src="/lenovo.svg" alt="">
+        <img src="/samsung.svg" alt="">
+        <img src="/apple.svg" alt="">
+        <img src="/bosch.svg" alt="">
+        <img src="/hp.svg" alt="">
+        <img src="acer.svg" alt="">
+        <img src="/view-sonic.svg" alt="">
+        <img src="/sony.svg" alt="">
+        <span></span><img src="/lenovo.svg" alt=""></span>
+        <img src="/samsung.svg" alt="">
+        <img src="/apple.svg" alt="">
+    </div>
+    <div id="readmore" class="readmore">
+      <div class="img"><img src="/ic-expand.svg" alt=""></div>
+      Показать все
+    </div>
+    <script>
+const   readmore = document.getElementById('readmore');
+const hiddenImages = document.querySelectorAll('.brands img:nth-last-child(-n+6)');
+readmore.addEventListener('click', () => {
+    if (readmore.textContent === "Показать все") {
+        hiddenImages.forEach(img => {
+            img.style.display = 'block';
+        });
+        img.src = '/ic-expand2.svg';
+            readmore.textContent = "Скрыть";
+    } else {
+        hiddenImages.forEach(img => {
+            img.style.display = 'flex';
+        });
+        readmore.textContent = "Скрыть";
+    }
+});
+    </script>
+    
+        
+</body>
+</html>
