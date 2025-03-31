@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.js">
     <title>Document</title>
 </head>
 <body>
@@ -26,26 +27,6 @@
     <div id="readmore" class="readmore">
       <div class="img"><img src="/ic-expand.svg" alt=""></div>
       Показать все
-    </div>
-    <script>
-const   readmore = document.getElementById('readmore');
-const hiddenImages = document.querySelectorAll('.brands img:nth-last-child(-n+6)');
-readmore.addEventListener('click', () => {
-    if (readmore.textContent === "Показать все") {
-        hiddenImages.forEach(img => {
-            img.style.display = 'block';
-        });
-        img.src = '/ic-expand2.svg';
-            readmore.textContent = "Скрыть";
-    } else {
-        hiddenImages.forEach(img => {
-            img.style.display = 'flex';
-        });
-        readmore.textContent = "Скрыть";
-    }
-});
-    </script>
-    
-        
+    </div>        
 </body>
 </html>
